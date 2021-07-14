@@ -1,0 +1,11 @@
+C:\Users\gabri\Projetos\CSharp\NetworkAddresser\NetworkAddresser.Lib.Netsh\bin\Debug\NetworkAddresser.Lib.Netsh.dll
+C:\Users\gabri\Projetos\CSharp\NetworkAddresser\NetworkAddresser.Lib.Netsh\bin\Debug\NetworkAddresser.Lib.Netsh.pdb
+C:\Users\gabri\Projetos\CSharp\NetworkAddresser\NetworkAddresser.Lib.Netsh\bin\Debug\GFramework.dll
+C:\Users\gabri\Projetos\CSharp\NetworkAddresser\NetworkAddresser.Lib.Netsh\bin\Debug\NetworkAddresser.Lib.dll
+C:\Users\gabri\Projetos\CSharp\NetworkAddresser\NetworkAddresser.Lib.Netsh\bin\Debug\GFramework.pdb
+C:\Users\gabri\Projetos\CSharp\NetworkAddresser\NetworkAddresser.Lib.Netsh\bin\Debug\NetworkAddresser.Lib.pdb
+C:\Users\gabri\Projetos\CSharp\NetworkAddresser\NetworkAddresser.Lib.Netsh\obj\Debug\NetworkAddresser.Lib.Netsh.csproj.AssemblyReference.cache
+C:\Users\gabri\Projetos\CSharp\NetworkAddresser\NetworkAddresser.Lib.Netsh\obj\Debug\NetworkAddresser.Lib.Netsh.csproj.CoreCompileInputs.cache
+C:\Users\gabri\Projetos\CSharp\NetworkAddresser\NetworkAddresser.Lib.Netsh\obj\Debug\NetworkAddresser.Lib.Netsh.csproj.CopyComplete
+C:\Users\gabri\Projetos\CSharp\NetworkAddresser\NetworkAddresser.Lib.Netsh\obj\Debug\NetworkAddresser.Lib.Netsh.dll
+C:\Users\gabri\Projetos\CSharp\NetworkAddresser\NetworkAddresser.Lib.Netsh\obj\Debug\NetworkAddresser.Lib.Netsh.pdb

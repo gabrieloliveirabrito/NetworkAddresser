@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetworkAddresser", "NetworkAddresser\NetworkAddresser.csproj", "{5E42957F-5A5C-48B0-AC93-1CC8612E2AF6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GFramework", "..\GFramework\GFramework\GFramework.csproj", "{EAA70469-296F-4BC7-B71E-EF0E613527BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetworkAddresser.Lib", "NetworkAddresser.Lib\NetworkAddresser.Lib.csproj", "{06F52799-ECAE-46A2-AE21-3D104068FDC3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetworkAddresser.Lib.Netsh", "NetworkAddresser.Lib.Netsh\NetworkAddresser.Lib.Netsh.csproj", "{31749411-3F5A-4346-9E3D-346E580B025F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetworkAddresser.Lib.WMI", "NetworkAddresser.Lib.WMI\NetworkAddresser.Lib.WMI.csproj", "{69BC21BC-5DEA-49A2-A207-B89D48DAC76A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5E42957F-5A5C-48B0-AC93-1CC8612E2AF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E42957F-5A5C-48B0-AC93-1CC8612E2AF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E42957F-5A5C-48B0-AC93-1CC8612E2AF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E42957F-5A5C-48B0-AC93-1CC8612E2AF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAA70469-296F-4BC7-B71E-EF0E613527BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAA70469-296F-4BC7-B71E-EF0E613527BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAA70469-296F-4BC7-B71E-EF0E613527BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAA70469-296F-4BC7-B71E-EF0E613527BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06F52799-ECAE-46A2-AE21-3D104068FDC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06F52799-ECAE-46A2-AE21-3D104068FDC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06F52799-ECAE-46A2-AE21-3D104068FDC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06F52799-ECAE-46A2-AE21-3D104068FDC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31749411-3F5A-4346-9E3D-346E580B025F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31749411-3F5A-4346-9E3D-346E580B025F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31749411-3F5A-4346-9E3D-346E580B025F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31749411-3F5A-4346-9E3D-346E580B025F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69BC21BC-5DEA-49A2-A207-B89D48DAC76A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69BC21BC-5DEA-49A2-A207-B89D48DAC76A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69BC21BC-5DEA-49A2-A207-B89D48DAC76A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69BC21BC-5DEA-49A2-A207-B89D48DAC76A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {27F8EF28-505E-460D-8506-895D36A96EF9}
+	EndGlobalSection
+EndGlobal

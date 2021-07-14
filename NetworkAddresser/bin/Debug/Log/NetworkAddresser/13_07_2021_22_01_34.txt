@@ -1,0 +1,19 @@
+13/07/2021 22:01:51 - FATAL - NetworkAddresser: InvalidCastException - Não é possível converter um objeto do tipo 'System.Windows.Forms.Button' no tipo 'System.Windows.Forms.MenuItem'.
+   em NetworkAddresser.Forms.ApplyProfileForm.btnApplyProfile_Click(Object sender, EventArgs e) na C:\Users\gabri\Projetos\CSharp\NetworkAddresser\NetworkAddresser\Forms\ApplyProfileForm.cs:linha 52
+   em System.Windows.Forms.Control.OnClick(EventArgs e)
+   em System.Windows.Forms.Button.OnClick(EventArgs e)
+   em System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   em System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   em System.Windows.Forms.Control.WndProc(Message& m)
+   em System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   em System.Windows.Forms.Button.WndProc(Message& m)
+   em System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   em System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   em System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   em System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   em System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   em System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   em System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   em System.Windows.Forms.Application.Run(ApplicationContext context)
+   em NetworkAddresser.Application.Run(Configuration configuration, AdapterManager manager) na C:\Users\gabri\Projetos\CSharp\NetworkAddresser\NetworkAddresser\Application.cs:linha 64
+   em NetworkAddresser.Program.Main(String[] args) na C:\Users\gabri\Projetos\CSharp\NetworkAddresser\NetworkAddresser\Program.cs:linha 55

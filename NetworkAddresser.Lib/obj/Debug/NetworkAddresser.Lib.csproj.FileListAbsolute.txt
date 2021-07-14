@@ -1,0 +1,6 @@
+C:\Users\gabri\Projetos\CSharp\NetworkAddresser\NetworkAddresser.Lib\bin\Debug\NetworkAddresser.Lib.dll
+C:\Users\gabri\Projetos\CSharp\NetworkAddresser\NetworkAddresser.Lib\bin\Debug\NetworkAddresser.Lib.pdb
+C:\Users\gabri\Projetos\CSharp\NetworkAddresser\NetworkAddresser.Lib\obj\Debug\NetworkAddresser.Lib.csproj.AssemblyReference.cache
+C:\Users\gabri\Projetos\CSharp\NetworkAddresser\NetworkAddresser.Lib\obj\Debug\NetworkAddresser.Lib.csproj.CoreCompileInputs.cache
+C:\Users\gabri\Projetos\CSharp\NetworkAddresser\NetworkAddresser.Lib\obj\Debug\NetworkAddresser.Lib.dll
+C:\Users\gabri\Projetos\CSharp\NetworkAddresser\NetworkAddresser.Lib\obj\Debug\NetworkAddresser.Lib.pdb
