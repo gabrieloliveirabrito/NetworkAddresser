@@ -46,9 +46,9 @@ namespace NetworkAddresser.Lib.Netsh
             }
         }
 
-        public override Dictionary<AdapterInfo, AdapterProfile> FetchEthernetAdapters()
+        public override List<AdapterInfo> FetchEthernetAdapters()
         {
-            var adapters = new Dictionary<AdapterInfo, AdapterProfile>();
+            var adapters = new List<AdapterInfo>();
 
             using (ManagementObjectSearcher NIC = new ManagementObjectSearcher("SELECT * FROM Win32_NetworkAdapter"))
             using (ManagementObjectCollection NICCol = NIC.Get())
@@ -62,52 +62,64 @@ namespace NetworkAddresser.Lib.Netsh
                         adapter.ID = id.ToString();
                         adapter.MACAddress = (string)NICObj["MACAddress"];
 
-                        using (ManagementObjectSearcher NAC = new ManagementObjectSearcher($"SELECT * FROM Win32_NetworkAdapterConfiguration WHERE Caption = '{NICObj["Caption"]}'"))
-                        using (ManagementObjectCollection NACCol = NAC.Get())
-                        {
-                            foreach (ManagementObject NACObj in NACCol)
-                            {
-                                if (Convert.ToBoolean(NACObj["IPEnabled"] ?? false))
-                                {
-                                    //string msg = "";
-                                    //foreach (var props in NACObj.Properties)
-                                    //{
-                                    //    if (props.Value != null && props.Type == CimType.String)
-                                    //        if (props.IsArray)
-                                    //        {
-                                    //            var obj = props.Value as Array;
-                                    //            msg += $"-- {props.Name}:" + Environment.NewLine;
-                                    //            foreach (var item in obj)
-                                    //                msg += $"--- {item}" + Environment.NewLine;
-                                    //        }
-                                    //        else
-                                    //            msg += $"-- {props.Name}: {props.Value}" + Environment.NewLine;
-                                    //}
-                                    var adapterProfile = new AdapterProfile();
-
-                                    adapterProfile.DHCP = Convert.ToBoolean(NACObj["DHCPEnabled"]);
-
-                                    string[] addresses = (string[])NACObj["IPAddress"];
-                                    string[] subnetMasks = (string[])NACObj["IPSubnet"];
-                                    string[] gateways = (string[])NACObj["DefaultIPGateway"];
-                                    string[] nameservers = (string[])NACObj["DNSServerSearchOrder"];
-
-                                    adapterProfile.Name = "Current Applied";
-                                    adapterProfile.Address = IPAddress.Parse(addresses.First());
-                                    adapterProfile.SubnetMask = IPAddress.Parse(subnetMasks.First());
-                                    adapterProfile.Gateway = gateways == null ? null : IPAddress.Parse(gateways.First());
-                                    adapterProfile.DNS1 = nameservers == null || nameservers.Length < 1 ? null : IPAddress.Parse(nameservers[0]);
-                                    adapterProfile.DNS2 = nameservers == null || nameservers.Length < 2 ? null : IPAddress.Parse(nameservers[1]);
-
-                                    adapters.Add(adapter, adapterProfile);
-                                }
-                            }
-                        }
+                        adapters.Add(adapter);
                     }
                 }
             }
 
             return adapters;
+        }
+
+        public override AdapterProfile GetDefaultAdapterProfile(AdapterInfo adapter)
+        {
+            try
+            {
+                using (ManagementObjectSearcher NIC = new ManagementObjectSearcher("SELECT * FROM Win32_NetworkAdapter"))
+                using (ManagementObjectCollection NICCol = NIC.Get())
+                {
+                    foreach (ManagementObject NICObj in NICCol)
+                    {
+                        var id = NICObj["NetConnectionID"];
+                        if (id != null)
+                        {
+                            using (ManagementObjectSearcher NAC = new ManagementObjectSearcher($"SELECT * FROM Win32_NetworkAdapterConfiguration WHERE Caption = '{NICObj["Caption"]}'"))
+                            using (ManagementObjectCollection NACCol = NAC.Get())
+                            {
+                                foreach (ManagementObject NACObj in NACCol)
+                                {
+                                    if (Convert.ToBoolean(NACObj["IPEnabled"] ?? false))
+                                    {
+                                        var adapterProfile = new AdapterProfile();
+
+                                        adapterProfile.DHCP = Convert.ToBoolean(NACObj["DHCPEnabled"]);
+
+                                        string[] addresses = (string[])NACObj["IPAddress"];
+                                        string[] subnetMasks = (string[])NACObj["IPSubnet"];
+                                        string[] gateways = (string[])NACObj["DefaultIPGateway"];
+                                        string[] nameservers = (string[])NACObj["DNSServerSearchOrder"];
+
+                                        adapterProfile.Name = "Current Applied";
+                                        adapterProfile.Address = IPAddress.Parse(addresses.First());
+                                        adapterProfile.SubnetMask = IPAddress.Parse(subnetMasks.First());
+                                        adapterProfile.Gateway = gateways == null ? null : IPAddress.Parse(gateways.First());
+                                        adapterProfile.DNS1 = nameservers == null || nameservers.Length < 1 ? null : IPAddress.Parse(nameservers[0]);
+                                        adapterProfile.DNS2 = nameservers == null || nameservers.Length < 2 ? null : IPAddress.Parse(nameservers[1]);
+
+                                        return adapterProfile;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                return null;
+            }
+            catch (Exception ex)
+            {
+                logger.LogFatal(ex);
+                return null;
+            }
         }
 
         public override bool ApplyAdapter(AdapterInfo adapter, AdapterProfile profile)

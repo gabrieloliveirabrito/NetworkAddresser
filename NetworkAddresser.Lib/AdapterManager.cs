@@ -11,7 +11,8 @@ namespace NetworkAddresser.Lib
     {
         public virtual bool Init() { return true; }
 
-        public abstract Dictionary<AdapterInfo, AdapterProfile> FetchEthernetAdapters();
+        public abstract List<AdapterInfo> FetchEthernetAdapters();
+        public abstract AdapterProfile GetDefaultAdapterProfile(AdapterInfo adapter);
         public abstract bool ApplyAdapter(AdapterInfo adapter, AdapterProfile profile);
     }
 }

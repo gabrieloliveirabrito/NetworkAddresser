@@ -18,3 +18,4 @@ C:\Users\gabri\Projetos\CSharp\NetworkAddresser\NetworkAddresser\bin\Debug\Netwo
 C:\Users\gabri\Projetos\CSharp\NetworkAddresser\NetworkAddresser\bin\Debug\Newtonsoft.Json.xml
 C:\Users\gabri\Projetos\CSharp\NetworkAddresser\NetworkAddresser\obj\Debug\NetworkAddresser.Forms.ApplyProfileForm.resources
 C:\Users\gabri\Projetos\CSharp\NetworkAddresser\NetworkAddresser\obj\Debug\NetworkAddresser.csproj.GenerateResource.cache
+C:\Users\gabri\Projetos\CSharp\NetworkAddresser\NetworkAddresser\obj\Debug\NetworkAddresser.Forms.AddProfileForm.resources

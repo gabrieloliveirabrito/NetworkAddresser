@@ -23,6 +23,7 @@ namespace NetworkAddresser
         AdapterManager manager;
 
         public Configuration Configuration => configuration;
+        public AdapterManager Manager => manager;
 
         public void Init()
         {
@@ -81,6 +82,18 @@ namespace NetworkAddresser
             else
             {
                 this.configuration = configuration;
+                return true;
+            }
+        }
+        public bool SaveConfiguration(Configuration configuration)
+        {
+            if (!Configuration.Save(configuration))
+                return false;
+            else
+            {
+                this.configuration = configuration;
+                Reload();
+
                 return true;
             }
         }

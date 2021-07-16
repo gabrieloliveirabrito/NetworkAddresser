@@ -58,6 +58,12 @@
   <ItemGroup>
     <Compile Include="Application.cs" />
     <Compile Include="Configuration.cs" />
+    <Compile Include="Forms\AddProfileForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddProfileForm.Designer.cs">
+      <DependentUpon>AddProfileForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ApplyProfileForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +102,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Forms\AddProfileForm.resx">
+      <DependentUpon>AddProfileForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ApplyProfileForm.resx">
       <DependentUpon>ApplyProfileForm.cs</DependentUpon>
     </EmbeddedResource>
